@@ -9,8 +9,9 @@ import org.testng.Assert;
 
 public class WarmUpTask {
     public static void main(String[] args) throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = null;
         try {
+            driver = null;
             driver.manage().window().maximize();
             driver.get("https://en.wikipedia.org/wiki/Main_Page");
             driver.findElement(By.linkText("Log in")).click();
